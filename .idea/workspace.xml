@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="98cf932f-bc93-4eae-8e84-8ee7f7d19a5d" name="Changes" comment="Totally from 0: added basic movement mechanics and rendering">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MainWithThreads.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ControlledMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/actions/AdditionalGrassSpawnAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/AdditionalGrassSpawnAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/actions/AdditionalHerbivoreSpawnAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/AdditionalHerbivoreSpawnAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/actions/AdditionalPredatorSpawnAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/AdditionalPredatorSpawnAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/actions/SpawnAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/SpawnAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/elements/MapRenderer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/elements/Renderer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/elements/Simulation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/elements/Simulation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/elements/SimulationManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/elements/SimulationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/elements/SimulationMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/elements/SimulationMap.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entities/Herbivore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entities/Herbivore.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entities/Predator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entities/Predator.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;bltntJ&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/7nullStyle4/Simulation.git&quot;,
+    &quot;accountId&quot;: &quot;122cd9df-a3db-4db8-8de7-6bd011352983&quot;
+  }
+}</component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7,
+  &quot;fromUser&quot;: false
+}</component>
+  <component name="ProjectId" id="3K54r0JTlJXdCwuGpf9J3R1paGs" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.ControlledMain.executor": "Run",
+    "Application.Main.executor": "Run",
+    "Application.MainWithThreads.executor": "Run",
+    "Groovy.GrassCoordinatesFinder.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "vcs.Git"
+  }
+}]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-30f59d01ecdd-37e91769500f-intellij.indexing.shared.core-IU-261.25134.95" />
+        <option value="bundled-js-predefined-d6986cc7102b-31caf2ab9e3c-JavaScript-IU-261.25134.95" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="98cf932f-bc93-4eae-8e84-8ee7f7d19a5d" name="Changes" comment="" />
+      <created>1790834292088</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1790834292088</updated>
+    </task>
+    <task id="LOCAL-00001" summary="Added pathfinding to Herbivore + grass generator + amendments in ui">
+      <option name="closed" value="true" />
+      <created>1793869358728</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1793869358729</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Added pathfinding to Herbivore + grass generator + amendments in ui">
+      <option name="closed" value="true" />
+      <created>1793869427149</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1793869427149</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Totally from 0: added basic movement mechanics and rendering">
+      <option name="closed" value="true" />
+      <created>1794736412881</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1794736412882</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Totally from 0: added basic movement mechanics and rendering">
+      <option name="closed" value="true" />
+      <created>1794736450281</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1794736450281</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Added pathfinding to Herbivore + grass generator + amendments in ui" />
+    <MESSAGE value="Totally from 0: added basic movement mechanics and rendering" />
+    <option name="LAST_COMMIT_MESSAGE" value="Totally from 0: added basic movement mechanics and rendering" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-field">
+          <url>file://$PROJECT_DIR$/src/actions/TurnActionsMain.java</url>
+          <line>5</line>
+          <properties field="simulationMap" class="actions.TurnActionsMain" />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/elements/Coordinates.java</url>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="game.Coordinates" memberName="row" />
+      </pinned-members>
+    </pin-to-top-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>
