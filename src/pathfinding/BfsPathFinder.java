@@ -32,10 +32,6 @@ public class BfsPathFinder {
             }
 
             for (Coordinates move : searcher.getMoves()) {
-                if (!current.canShift(simulationMap, new Coordinates(move.x(), move.y()))) {
-                    continue;
-                }
-
                 Coordinates neighbor = new Coordinates(current.x() + move.x(),current.y() + move.y());
 
                 if (searcher.isValidMove(neighbor, simulationMap, visited, target)) {

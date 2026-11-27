@@ -8,31 +8,31 @@ import java.util.Map;
 public class SimulationMap {
     private final int height;
     private final int width;
-    private final Map<Coordinates, Entity> worldMap = new HashMap<>();
+    private final Map<Coordinates, Entity> simulationMap = new HashMap<>();
 
     public SimulationMap(int height, int width) {
         this.height = height;
         this.width = width;
     }
 
-    public Map<Coordinates, Entity> getWorldMap() {
-        return new HashMap<>(worldMap);
+    public Map<Coordinates, Entity> getEntities() {
+        return new HashMap<>(simulationMap);
     }
 
     public Entity getEntity(Coordinates coordinates) {
         validateCoordinates(coordinates);
-        return worldMap.get(coordinates);
+        return simulationMap.get(coordinates);
     }
 
     public void addEntity(Coordinates coordinates, Entity entity) {
         validateCoordinates(coordinates);
         entity.setCoordinates(coordinates);
-        worldMap.put(coordinates, entity);
+        simulationMap.put(coordinates, entity);
     }
 
     public void removeEntity(Coordinates coordinates) {
         validateCoordinates(coordinates);
-        worldMap.remove(coordinates);
+        simulationMap.remove(coordinates);
     }
 
     public void validateCoordinates(Coordinates coordinates) {
@@ -43,7 +43,7 @@ public class SimulationMap {
 
     public boolean isCellEmpty(Coordinates coordinates) {
         validateCoordinates(coordinates);
-        return !worldMap.containsKey(coordinates);
+        return !simulationMap.containsKey(coordinates);
     }
 
     public int getWidth() {

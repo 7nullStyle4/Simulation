@@ -9,6 +9,5 @@ public class ControlledMain {
         SimulationController controller = new SimulationController(simulation);
 
         controller.start();
-        simulation.startSimulation();
     }
 }

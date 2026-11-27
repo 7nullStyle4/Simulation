@@ -30,8 +30,12 @@ public abstract class Creature extends Entity {
     }
 
     public boolean isValidMove(Coordinates neighbor, SimulationMap simulationMap, Set<Coordinates> visited, Class<? extends Entity> target) {
+        if (neighbor.x() < 1 || neighbor.x() > simulationMap.getWidth() || neighbor.y() < 1 || neighbor.y() > simulationMap.getHeight()) {
+            return false;
+        }
+
         boolean isNotVisited = !visited.contains(neighbor);
-        boolean isEmptyCell = !simulationMap.getWorldMap().containsKey(neighbor);
+        boolean isEmptyCell = !simulationMap.getEntities().containsKey(neighbor);
         boolean isAppropriateCell = target.isInstance(simulationMap.getEntity(neighbor));
 
         return isNotVisited && (isEmptyCell || isAppropriateCell);

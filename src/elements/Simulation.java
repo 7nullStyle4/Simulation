@@ -1,14 +1,14 @@
 package elements;
 
 import actions.*;
-import settings.Settings;
+import render.ConsoleMapRenderer;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class Simulation {
     private final SimulationMap simulationMap;
-    private final Renderer renderer;
+    private final ConsoleMapRenderer consoleMapRenderer;
     private final MoveCounter moveCounter;
     private final List<Action> initActions = new ArrayList<>();
     private final List<Action> turnActions = new ArrayList<>();
@@ -16,36 +16,51 @@ public class Simulation {
 
     public Simulation(SimulationMap simulationMap) {
         this.simulationMap = simulationMap;
-        this.renderer = new Renderer();
+        this.consoleMapRenderer = new ConsoleMapRenderer();
         this.moveCounter = new MoveCounter();
-
         createActions();
         executeActions(initActions);
     }
 
     public void startSimulation() {
-        if (isRunning) return;
+        sleepBetweenCommands();
+        if (isRunning) {
+            return;
+        }
 
         isRunning = true;
-        System.out.println("Started...");
-        sleep();
         new Thread(() -> {
+            sleep();
             while (isRunning) {
                 nextTurn();
                 sleep();
+                if (isNotRunning()) {
+                    return;
+                }
             }
         }).start();
     }
 
     public void pauseSimulation() {
-        if (!isRunning) return;
+        sleepBetweenCommands();
+        if (!isRunning) {
+            return;
+        }
 
         isRunning = false;
-        System.out.println("Paused...");
+    }
+
+    public void stopSimulation() {
+        sleepBetweenCommands();
+        isRunning = false;
+    }
+
+    public boolean isNotRunning() {
+        return !isRunning;
     }
 
     private void nextTurn() {
-        renderer.render(simulationMap);
+        consoleMapRenderer.render(simulationMap);
         executeActions(turnActions);
         moveCounter.printCount();
     }
@@ -64,17 +79,19 @@ public class Simulation {
         }
     }
 
+    private void sleepBetweenCommands() {
+        try {
+            Thread.sleep(50);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
     private void createActions() {
-        initActions.add(new HerbivoreSpawnAction(Settings.HERBIVORE_START_COUNT));
-        initActions.add(new PredatorSpawnAction(Settings.PREDATOR_START_COUNT));
-        initActions.add(new GrassSpawnAction(Settings.GRASS_START_COUNT));
-        initActions.add(new TreeSpawnAction(Settings.TREE_START_COUNT));
-        initActions.add(new RockSpawnAction(Settings.ROCK_START_COUNT));
+        initActions.add(new SpawnEntitiesAction());
 
         turnActions.add(new MoveCreaturesAction());
         turnActions.add(new RemoveDeadCreatureAction());
-        turnActions.add(new AdditionalHerbivoreSpawnAction(Settings.HERBIVORE_ADDITIONAL_COUNT));
-        turnActions.add(new AdditionalPredatorSpawnAction(Settings.PREDATOR_ADDITIONAL_COUNT));
-        turnActions.add(new AdditionalGrassSpawnAction(Settings.GRASS_ADDITIONAL_COUNT));
+        turnActions.add(new ReplenishEntityAction());
     }
 }

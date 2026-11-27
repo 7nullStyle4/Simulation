@@ -1,8 +1,10 @@
-package elements;
+package render;
 
+import elements.Coordinates;
+import elements.SimulationMap;
 import entities.Entity;
 
-public class Renderer {
+public class ConsoleMapRenderer implements MapRenderer {
     private static final String HERBIVORE = "\uD83D\uDC01";
     private static final String PREDATOR = "\uD83D\uDC08";
     private static final String GRASS = "\uD83E\uDDC0";
