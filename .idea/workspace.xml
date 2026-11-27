@@ -2,33 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="98cf932f-bc93-4eae-8e84-8ee7f7d19a5d" name="Changes" comment="Totally from 0: added basic movement mechanics and rendering">
-      <change afterPath="$PROJECT_DIR$/src/actions/ReplenishEntityAction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/render/ConsoleMapRenderer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/render/ConsoleMenuRenderer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/render/MapRenderer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/render/MenuRenderer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/EntityFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/actions/EntityObjectSupplier.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ControlledMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ControlledMain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/AdditionalGrassSpawnAction.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/AdditionalHerbivoreSpawnAction.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/AdditionalPredatorSpawnAction.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/GrassSpawnAction.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/HerbivoreSpawnAction.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/MoveCreaturesAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/MoveCreaturesAction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/PredatorSpawnAction.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/RemoveDeadCreatureAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/RemoveDeadCreatureAction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/RockSpawnAction.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/SpawnAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/SpawnEntitiesAction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/TreeSpawnAction.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/elements/Coordinates.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/elements/Coordinates.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/elements/Renderer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/elements/Simulation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/elements/Simulation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/elements/SimulationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/elements/SimulationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/actions/ReplenishEntityAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/ReplenishEntityAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/actions/SpawnEntitiesAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/SpawnEntitiesAction.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/elements/SimulationMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/elements/SimulationMap.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entities/Creature.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entities/Creature.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pathfinding/BfsPathFinder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pathfinding/BfsPathFinder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/EntityFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/EntityFactory.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

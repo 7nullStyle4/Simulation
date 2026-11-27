@@ -2,7 +2,9 @@ package elements;
 
 import entities.*;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class SimulationMap {
@@ -39,6 +41,21 @@ public class SimulationMap {
         if(coordinates.x() < 1 || coordinates.x() > width || coordinates.y() < 1 || coordinates.y() > height) {
             throw new RuntimeException("Invalid coordinates: %d %d".formatted(coordinates.x(), coordinates.y()));
         };
+    }
+
+    public List<Coordinates> getEmptyCells() {
+        List<Coordinates> emptyCell = new ArrayList<>();
+
+        for (int y = 1; y <= height; y++) {
+            for (int x = 1; x <= width; x++) {
+                Coordinates coordinates = new Coordinates(x, y);
+                if (!simulationMap.containsKey(coordinates)) {
+                    emptyCell.add(coordinates);
+                }
+            }
+        }
+
+        return emptyCell;
     }
 
     public boolean isCellEmpty(Coordinates coordinates) {

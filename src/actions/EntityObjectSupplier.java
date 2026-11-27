@@ -1,19 +1,12 @@
-package utils;
+package actions;
 
 import elements.Coordinates;
-import entities.Entity;
-import entities.Grass;
-import entities.Herbivore;
-import entities.Predator;
-import entities.Rock;
-import entities.Tree;
+import entities.*;
 import settings.Settings;
 
-public final class EntityFactory {
+public class EntityObjectSupplier {
 
-    private EntityFactory() {}
-
-    public static Entity create(Class<? extends Entity> entityType, Coordinates coordinates) {
+    public static Entity createEntityByType(Class<? extends Entity> entityType, Coordinates coordinates) {
         return switch (entityType.getSimpleName()) {
             case "Herbivore" -> new Herbivore(Settings.HERBIVORE_HEALTH, Settings.HERBIVORE_SPEED, coordinates);
             case "Predator" -> new Predator(Settings.PREDATOR_HEALTH, Settings.PREDATOR_SPEED, Settings.PREDATOR_ATTACK, coordinates);
